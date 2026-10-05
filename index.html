@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UCCS Ice Hockey Club | Sponsorships</title>
+  <meta name="description" content="Sponsor the UCCS Ice Hockey Club. Community, Power Play, All-Star, and Championship partnership tiers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #121417;
+      --muted: #5c6570;
+      --line: #d8dee6;
+      --paper: #f4f6f8;
+      --white: #ffffff;
+      --community: #c5c9ce;
+      --community-ink: #1c2430;
+      --power: #123a63;
+      --allstar: #1f6b45;
+      --champ: #16181c;
+      --gold: #c6a15b;
+      --gold-deep: #8d7040;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(18, 58, 99, 0.18), transparent 60%),
+        linear-gradient(180deg, #eef2f6 0%, #f7f8fa 240px);
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    a { color: var(--power); }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      background: #0e1116;
+      color: white;
+      border-bottom: 4px solid var(--gold);
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 0.04em;
+    }
+    .logo {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+    .brand strong { display: block; font-family: Oswald, sans-serif; font-size: 1.15rem; letter-spacing: 0.08em; }
+    .brand span { display: block; color: #b7c0cc; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .cta {
+      background: var(--gold);
+      color: #111;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 16px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .cta:hover { filter: brightness(1.05); }
+
+    .hero { padding: 42px 0 18px; }
+    .eyebrow {
+      font-family: Oswald, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--power);
+      font-size: 0.85rem;
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-family: Oswald, sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 0.95;
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .lede { max-width: 680px; font-size: 1.12rem; color: #2c3440; margin: 0 0 18px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 18px; color: var(--muted); font-size: 0.95rem; }
+
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 4px 0 28px;
+    }
+    .photos figure {
+      margin: 0;
+      background: transparent;
+      border: 0;
+      overflow: hidden;
+    }
+    .photos img {
+      width: 100%;
+      height: auto;
+      object-fit: unset;
+      display: block;
+      background: transparent;
+    }
+    .photos figcaption {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 12px 12px;
+    }
+    @media (max-width: 800px) {
+      .photos { grid-template-columns: 1fr; }
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+      margin: 22px 0 36px;
+      overflow: auto;
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    th, td { padding: 14px 12px; text-align: center; vertical-align: middle; border-bottom: 1px solid #e6ebf1; }
+    th:first-child, td:first-child { text-align: left; }
+    thead th {
+      color: white;
+      font-family: Oswald, sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 1.05rem;
+      line-height: 1.05;
+      padding: 16px 10px 14px;
+    }
+    thead th small { display: block; font-family: Oswald, sans-serif; font-size: 1.25rem; margin-top: 4px; letter-spacing: 0.02em; }
+    .icon { display: block; font-size: 1.35rem; margin-bottom: 2px; }
+    .benefits { background: #111; width: 24%; }
+    .community { background: #d5d8dc; color: #1b2430; }
+    .power { background: #123a63; }
+    .allstar { background: #1e6a44; }
+    .champ { background: #14171c; }
+    tbody td:first-child {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      background: #f7f8fa;
+      white-space: nowrap;
+    }
+    tbody tr:nth-child(even) td { background: #f3f5f7; }
+    tbody tr:nth-child(even) td:first-child { background: #eef1f4; }
+    .dash { color: #9aa3ad; }
+    .yes { color: #1e6a44; font-weight: 700; }
+    .best td { font-style: italic; color: #243041; font-weight: 600; background: #fff !important; }
+    .best td:first-child { font-style: normal; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 8px 0 28px;
+    }
+    .card {
+      background: white;
+      border-top: 6px solid #111;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-top-width: 6px;
+    }
+    .card.power { border-top-color: var(--power); }
+    .card.allstar { border-top-color: var(--allstar); }
+    .card.champ { border-top-color: #111; }
+    .card.community { border-top-color: #9aa3ad; }
+    .card h2 { font-family: Oswald, sans-serif; margin: 0; text-transform: uppercase; font-size: 1.25rem; }
+    .price { font-family: Oswald, sans-serif; font-size: 1.7rem; margin: 4px 0 8px; }
+    .card p { margin: 0; color: #334; font-size: 0.95rem; }
+
+    .contact {
+      background: #111;
+      color: white;
+      padding: 36px 0 42px;
+    }
+    .contact h2 { font-family: Oswald, sans-serif; text-transform: uppercase; margin: 0 0 8px; font-size: 2rem; }
+    .contact p { margin: 0 0 14px; color: #d5dbe3; max-width: 640px; }
+    .mail {
+      display: inline-block;
+      color: #111;
+      background: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 16px;
+      letter-spacing: 0.03em;
+    }
+    footer { padding: 18px 0 28px; color: var(--muted); font-size: 0.85rem; }
+
+    @media (max-width: 800px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+      .top { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 520px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <div class="brand">
+        <img class="logo" src="uccs-logo.png" alt="UCCS" />
+        <div>
+          <strong>UCCS Ice Hockey</strong>
+          <span>Club sponsorships</span>
+        </div>
+      </div>
+      <a class="cta" href="mailto:uccsicehockey@gmail.com?subject=UCCS%20Ice%20Hockey%20Sponsorship">Become a sponsor</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">University of Colorado Colorado Springs</p>
+      <h1>Partner with the club.</h1>
+      <p class="lede">Put your brand in front of players, families, students, and game-day crowds. Pick a tier, and the club will confirm placement and recognition for the season.</p>
+      <div class="meta">
+        <span>Season partnerships</span>
+        <span>Email: uccsicehockey@gmail.com</span>
+      </div>
+    </section>
+
+    <section class="photos" aria-label="Team photos">
+      <figure>
+        <img src="recruit.jpg" alt="UCCS hockey player in a white and gold jersey at the net. Text reads We want you UCCS Hockey." />
+        <figcaption>We want you · UCCS Hockey</figcaption>
+      </figure>
+      <figure>
+        <img src="game.jpg" alt="UCCS Ice Hockey Club in white and gold during a game at the rink." />
+        <figcaption>Game night</figcaption>
+      </figure>
+    </section>
+
+    <section class="cards" aria-label="Sponsorship tiers">
+      <article class="card community">
+        <h2>Community</h2>
+        <div class="price">$500</div>
+        <p>Local businesses looking to make an impact.</p>
+      </article>
+      <article class="card power">
+        <h2>Power Play</h2>
+        <div class="price">$1,000</div>
+        <p>More visibility. More impact.</p>
+      </article>
+      <article class="card allstar">
+        <h2>All-Star</h2>
+        <div class="price">$2,500</div>
+        <p>Take your brand to the next level with premium exposure.</p>
+      </article>
+      <article class="card champ">
+        <h2>Championship</h2>
+        <div class="price">$5,000+</div>
+        <p>The ultimate partnership for maximum exposure.</p>
+      </article>
+    </section>
+
+    <section class="panel" aria-label="Sponsorship benefits">
+      <table>
+        <thead>
+          <tr>
+            <th class="benefits">Sponsorship<br />benefits</th>
+            <th class="community"><span class="icon" aria-hidden="true">&#9968;</span>Community<small>$500</small></th>
+            <th class="power"><span class="icon" aria-hidden="true">&#9889;</span>Power Play<small>$1,000</small></th>
+            <th class="allstar"><span class="icon" aria-hidden="true">&#9733;</span>All-Star<small>$2,500</small></th>
+            <th class="champ"><span class="icon" aria-hidden="true">&#9819;</span>Championship<small>$5,000+</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rink signage</td>
+            <td>Small printed sign</td>
+            <td>Medium (larger printed sign)</td>
+            <td>Large banner or tablecloth</td>
+            <td>Premium placement (larger banner)</td>
+          </tr>
+          <tr>
+            <td>Team t-shirt logo</td>
+            <td class="dash">—</td>
+            <td><span class="yes">&#10003;</span> Back of shirt</td>
+            <td><span class="yes">&#10003;</span> Back of shirt</td>
+            <td><span class="yes">&#10003;</span> Back of shirt</td>
+          </tr>
+          <tr>
+            <td>Jersey patch</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td><span class="yes">&#10003;</span> Limited availability</td>
+            <td><span class="yes">&#10003;</span> Premium (custom placement)</td>
+          </tr>
+          <tr>
+            <td>Social media recognition</td>
+            <td><span class="yes">&#10003;</span> Logo + thank you post</td>
+            <td><span class="yes">&#10003;</span> 1 dedicated post + story mentions</td>
+            <td><span class="yes">&#10003;</span> 2–3 posts + story mentions</td>
+            <td><span class="yes">&#10003;</span> Multiple posts, stories + dedicated features</td>
+          </tr>
+          <tr>
+            <td>Game-day recognition</td>
+            <td><span class="yes">&#10003;</span> Announcements</td>
+            <td><span class="yes">&#10003;</span> Announcements, PA, etc.</td>
+            <td><span class="yes">&#10003;</span> Announcements, PA, etc.</td>
+            <td><span class="yes">&#10003;</span> Featured game sponsorship</td>
+          </tr>
+          <tr>
+            <td>UCCS Radio</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td><span class="yes">&#10003;</span> Shout-out (if available)</td>
+            <td><span class="yes">&#10003;</span> Commercial + multiple mentions</td>
+          </tr>
+          <tr>
+            <td>Tournament sponsorship</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td><span class="yes">&#10003;</span> Recognition</td>
+            <td><span class="yes">&#10003;</span> Major sponsor recognition</td>
+          </tr>
+          <tr>
+            <td>End-of-season recognition</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td><span class="yes">&#10003;</span> Logo in season recap + thank you</td>
+          </tr>
+          <tr class="best">
+            <td>Best for</td>
+            <td>Local businesses looking to make an impact</td>
+            <td>More visibility. More impact.</td>
+            <td>Take your brand to the next level with premium exposure.</td>
+            <td>The ultimate partnership for maximum exposure.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <section class="contact" id="sponsor">
+    <div class="wrap">
+      <h2>Ready to sponsor?</h2>
+      <p>Email the club with the tier you want, your business name, and a logo file. The treasurer will reply with payment details and next steps.</p>
+      <a class="mail" href="mailto:uccsicehockey@gmail.com?subject=UCCS%20Ice%20Hockey%20Sponsorship&body=Business%20name%3A%0ATier%20(Community%20%2F%20Power%20Play%20%2F%20All-Star%20%2F%20Championship)%3A%0AWebsite%3A%0A">uccsicehockey@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">UCCS Ice Hockey Club · Sponsorship benefits subject to availability, including jersey patches and UCCS Radio.</div>
+  </footer>
+</body>
+</html>
